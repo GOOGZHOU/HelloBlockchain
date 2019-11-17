@@ -18,26 +18,112 @@
 			  font-weight: normal;
 			  margin-top: 5px;
 			}
+
+			.nav ul {
+			  list-style: none;
+			  background-color: #444;
+			  text-align: center;
+			  padding: 0;
+			  margin: 0;
+			}
+
+			.nav li {
+			  font-family: 'Oswald', sans-serif;
+			  font-size: 1.2em;
+			  line-height: 40px;
+			  text-align: left;
+			}
+
+			.nav a {
+			  text-decoration: none;
+			  color: #fff;
+			  display: block;
+			  padding-left: 15px;
+			  border-bottom: 1px solid #888;
+			  transition: .3s background-color;
+			}
+
+			.nav a:hover {
+			  background-color: #005f5f;
+			}
+
+			.nav a.active {
+			  background-color: #aaa;
+			  color: #444;
+			  cursor: default;
+			}
+
+			/* Sub Menus */
+			.nav li li {
+			  font-size: .8em;
+			}
+
+			/*******************************************
+			   Style menu for larger screens
+
+			   Using 650px (130px each * 5 items), but ems
+			   or other values could be used depending on other factors
+			********************************************/
+
+			@media screen and (min-width: 650px) {
+			  .nav li {
+			    width: 130px;
+			    border-bottom: none;
+			    height: 50px;
+			    line-height: 50px;
+			    font-size: 1.4em;
+			    display: inline-block;
+			    margin-right: -4px;
+			  }
+
+			  .nav a {
+			    border-bottom: none;
+			  }
+
+			  .nav > ul > li {
+			    text-align: center;
+			  }
+
+			  .nav > ul > li > a {
+			    padding-left: 0;
+			  }
+
+			  /* Sub Menus */
+			  .nav li ul {
+			    position: absolute;
+			    display: none;
+			    width: inherit;
+			  }
+
+			  .nav li:hover ul {
+			    display: block;
+			  }
+
+			  .nav li ul li {
+			    display: block;
+			  }
+			}			
 			
 		</style>
 	</head>
 	<body>
-		<nav>
-    		<ul>
-        		<li><a href="/">Home</a></li>
-	        	<li><a href="http://dev.kulap.io/libra">Wallet(Testnet)</a></li>
-        		<li><a href="https://libraauction.azurewebsites.net/">Auction</a></li>
-        		<li><a href="/about">About</a></li>
-    		</ul>
-		</nav>
+  <header>
+    <div class="nav">
+      <ul>
+        <li class="home"><a href="#">Home</a></li>
+        <li class="tutorials"><a class="active" href="http://dev.kulap.io/libra">Wallet</a></li>
+        <li class="about"><a href="https://libraauction.azurewebsites.net/">Auction</a></li>
+        <li class="contact"><a href="#">About</a></li>
+      </ul>Auction
+    </div>
+  </header>		
 		<div class="container">
     		<div class="blurb">
         		<h1>My First Blockchain Transaction</h1>
 				<p>Blockchain intro - your first blockchain transaction (on a testnet):<br/>
-
-1. from your mobile phone, open website to create a test wallet instantly: http://dev.kulap.io/libra<br/>
+1. from your mobile phone, open website to create a test wallet instantly:  <b>http://dev.kulap.io/libra</b><br/>
 2. wait for presenter's QR code to be displayed on the screen (auction wallet)<br/>
-3. click on 'Send', and choose 'Allow' to enable browser's camera access, and scan the QR code on the presenter's screen.  enter any amount you want and 'Confirm' the payment.
+3. click on 'Send', and choose 'Allow' to enable browser's camera access, and scan the QR code on the presenter's screen.  enter any amount you want and 'Confirm' the payment.<br/>
 4. done! you just made a payment transaction on a blockchain. <br/>
 
 <br/><br/>
